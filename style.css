@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffb6c1, #ff758c); /* Baby pink gradient */
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* PAGE WRAPPER */
+.page {
+  display: flex;
+  justify-content: center;
+}
+
+/* MAIN CARD */
+.card {
+  width: 100%;
+  max-width: 1100px;
+  background: linear-gradient(135deg, #ffe6f0, #eaffea); /* baby pink + light green */
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  text-align: center;
+  position: relative;
+}
+
+/* 🎵 MUSIC BUTTON */
+.music-btn {
+  background: linear-gradient(45deg, #ff4d6d, #98fb98); /* pink + light green */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-bottom: 40px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.music-btn:hover {
+  transform: scale(1.05);
+}
+
+/* MEDIA SECTION */
+.media-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+/* SLIDESHOW */
+.slideshow {
+  width: 450px;
+  height: 320px;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 5px solid #ff69b4; /* baby pink border */
+  box-shadow: 0 15px 35px rgba(152, 251, 152, 0.4); /* light green glow */
+}
+
+.slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.6s ease-in-out;
+}
+
+/* VIDEO */
+.video-box {
+  width: 450px;
+  height: 320px;
+}
+
+.video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(255, 182, 193, 0.5); /* pink glow */
+}
+
+/* TEXT */
+h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+  background: linear-gradient(45deg, #ff4d6d, #98fb98);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.message {
+  font-size: 17px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 26px;
+  margin-top: 15px;
+  color: #2e8b57; /* soft green */
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 30px;
+  position: relative;
+  height: 80px;
+}
+
+button {
+  padding: 14px 30px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  margin: 0 15px;
+  transition: 0.3s;
+}
+
+#yesBtn {
+  background: linear-gradient(45deg, #ff4d6d, #ffb6c1);
+  color: white;
+}
+
+#yesBtn:hover {
+  transform: scale(1.1);
+}
+
+#noBtn {
+  background: #d8f5d8; /* light green */
+  position: absolute;
+}
+
+/* ROSES */
+.rose {
+  position: fixed;
+  top: -20px;
+  font-size: 22px;
+  animation: fall 6s linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(110vh); opacity: 0; }
+}
+
+/* CONFETTI */
+.confetti {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  animation: confetti 3s linear forwards;
+}
+
+@keyframes confetti {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+/* MOBILE FIX */
+@media (max-width: 950px) {
+
+  .media-section {
+    flex-direction: column;
+  }
+
+  .slideshow,
+  .video-box {
+    width: 100%;
+    height: 250px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+
+/* Celebration Screen */
+.celebration {
+  height: 100vh;
+  background: radial-gradient(circle, #ffb6c1, #98fb98);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.yay-text {
+  font-size: 60px;
+  color: white;
+  text-shadow: 0 0 20px rgba(255,255,255,0.8);
+  animation: pop 0.8s ease-out;
+}
+
+.yay-sub {
+  font-size: 22px;
+  margin-top: 20px;
+  color: white;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Fireworks */
+.firework {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
