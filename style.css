@@ -183,40 +183,51 @@ button {
 }
 
 /* Celebration Screen */
+/* DARK CELEBRATION SCREEN */
 .celebration {
   height: 100vh;
-  background: radial-gradient(circle, #ffb6c1, #98fb98);
+  background: radial-gradient(circle at center, #1a1a2e, #0f0f1a);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   overflow: hidden;
+  position: relative;
 }
 
+/* BIG YAY TEXT */
 .yay-text {
-  font-size: 60px;
-  color: white;
-  text-shadow: 0 0 20px rgba(255,255,255,0.8);
+  font-size: 70px;
+  font-weight: bold;
+  color: #ff4d6d;
+  text-shadow:
+    0 0 10px #ff4d6d,
+    0 0 20px #ff4d6d,
+    0 0 40px #ff69b4,
+    0 0 80px #ff69b4;
   animation: pop 0.8s ease-out;
 }
 
+/* SUB TEXT */
 .yay-sub {
   font-size: 22px;
-  margin-top: 20px;
-  color: white;
+  margin-top: 25px;
+  color: #98fb98;
+  text-shadow: 0 0 10px rgba(152, 251, 152, 0.6);
 }
 
+/* POP ANIMATION */
 @keyframes pop {
   0% { transform: scale(0.5); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
 
-/* Fireworks */
+/* FIREWORK PARTICLES */
 .firework {
   position: fixed;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   animation: explode 1s ease-out forwards;
 }
@@ -227,7 +238,7 @@ button {
     opacity: 1;
   }
   100% {
-    transform: scale(4);
+    transform: scale(5);
     opacity: 0;
   }
 }
